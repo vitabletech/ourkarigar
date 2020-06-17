@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dummy Form</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 24px;
+	color: #990000;
+	font-weight: bold;
+}
+.style3 {
+	color: #0000CC;
+	font-size: 18px;
+}
+-->
+</style>
+</head>
+<script>
+function validateform()
+{
+var school_name=document.myform.school_name.value;
+var student_name=document.myform.student_name.value;
+var father_name=document.myform.father_name.value;
+var class=document.myform.class.value;
+var mobile=document.myform.mobile.value;
+var father_mobile=document.myform.father_mobile.value;
+if(school_name=="")
+{
+alert ("School Name can't be blank");
+return false;
+}
+if(student_name=="")
+{
+alert ("Student Name can't be blank");
+return false;
+}
+if(father_name=="")
+{
+alert ("Father Name can't be blank");
+return false;
+}
+if(class=="")
+{
+alert ("Class & Stream can't be blank");
+return false;
+}
+if(mobile=="")
+{
+alert ("Mobile Number can't be blank");
+return false;
+}
+if(father_mobile=="")
+{
+alert ("Father Mobile Numneber can't be blank");
+return false;
+}
+return true;
+
+}
+</script>
+<body>
+<form name="myform" action="save.php" method="post" enctype="multipart/form-data" onsubmit="return validateform()">
+<table align="center" bgcolor="#99FFFF">
+<tr>
+<td><img src="header.jpg" width=1000 />   </td>
+</tr>
+<tr>
+<td align="center" valign="middle" bgcolor="#66FFFF"><span class="style1"> STUDENT REGISTRATION FORM </span></td>
+</tr>
+<tr>
+<td align="left" valign="middle" bgcolor="#66FFFF"><span class="style3">* - These fields are compulasory to fill.</span> </span></td>
+</tr>
+<tr>
+<td>
+<table width="800" border="1" align="center" bgcolor="#99CCFF">
+    <td>Upload Photo </td>
+    <td><input type="file" name="studentimage"  id="studentimage"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" name="Submit" value="Submit" /></td>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+</form>
+</body>
+</html>
